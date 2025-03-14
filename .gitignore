@@ -17,7 +17,7 @@ screenshots/
 
 # Ignore environment variables and credentials
 .env
-config/config.json  # If config contains sensitive data, consider ignoring it!
+config/config.json
 
 # Ignore WebDriver executables (optional, unless shared)
 drivers/
@@ -27,8 +27,8 @@ geckodriver
 geckodriver.exe
 
 # Ignore OS-specific files
-.DS_Store  # macOS
-Thumbs.db  # Windows
+.DS_Store
+Thumbs.db
 
 # Ignore PyTest cache and test reports
 .pytest_cache/

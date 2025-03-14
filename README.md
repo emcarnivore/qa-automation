@@ -9,27 +9,24 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 ### Prerequisites
 
 - Python 3.x
-- pip (Python Package Installer)
+- pip (*Python Package Installer*)
 
 ### Setting Up the Project
 
 1. **Clone the Repository**
-   ```git clone <repository-url>```
-   ```cd qa-automation```
+- ```git clone <repository-url>```
+- ```cd qa-automation```
 
 2. **Create a Virtual Environment**
-   ```python3 -m venv venv```
+- ```python3 -m venv venv```
 
 3. **Activate the Virtual Environment**
-   On macOS and Linux:
-   ```source venv/bin/activate```
-   On Windows:
-   ```.\venv\Scripts\activate```
+- ```source venv/bin/activate``` (*macOS/Linux*)
+- ```.\venv\Scripts\activate``` (*Windows*)
 
 4. **Install Required Packages**
-   ```pip install -r requirements.txt```
-
-   requirements.txt:
+- ```pip install -r requirements.txt```
+- requirements.txt:
    - pytest
    - selenium
    - webdriver-manager
@@ -37,17 +34,17 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 ### Running Tests
 
 1. **Run Tests with PyTest**
-   ```pytest tests/```
+- ```pytest tests/```
 
 2. **Generate HTML Report (optional)**
-   ```pytest --html=reports/report.html```
+- ```pytest --html=reports/report.html```
 
 ### Additional Notes
 
-- Ensure that your IDE (e.g. Visual Studio Code) is configured to use the virtual environment's interpreter.
+1. Ensure that your IDE (e.g. Visual Studio Code) is configured to use the virtual environment's interpreter.
 
-- **To Deactivate the Virtual Environment**
-```deactivate```
+2. **To Deactivate the Virtual Environment**
+- ```deactivate```
 
 ## 🏗️ Folder Structure Explained
 
@@ -61,12 +58,13 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 - **utils/** → Utility functions and configuration loaders.
 - **venv/** → Virtual environment directory containing project-specific dependencies.
 - **root files:**
-  `.env` → Stores environment-specific settings.
-  `.gitignore` → Specifies files and folders to exclude from version control.
-  `pytest.ini` → PyTest configuration file for test execution settings.
-  `requirements.txt` → Lists required Python dependencies for the project.
+   - `.env` → Stores environment-specific settings.
+   - `.gitignore` → Specifies files and folders to exclude from version control.
+   - `LICENSE` → Contains the project's license information.
+   - `pytest.ini` → PyTest configuration file for test execution settings.
+   - `README.md` → Provides an overview and setup instructions for the project.
+   - `requirements.txt` → Lists required Python dependencies for the project.
 
 ## 📜 License
 
-This project is licensed under the GPL-3.0 License.
-
+- This project is licensed under the GPL-3.0 License.
