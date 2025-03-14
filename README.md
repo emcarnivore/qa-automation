@@ -67,4 +67,4 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 
 ## 📜 License
 
-- This project is licensed under the GPL-3.0 License.
+- This project is licensed under the GNU GPL-3.0 License.
