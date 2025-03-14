@@ -1,0 +1,45 @@
+# Ignore Python cache files
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore logs and reports
+logs/
+*.log
+reports/
+screenshots/
+
+# Ignore environment variables and credentials
+.env
+config/config.json  # If config contains sensitive data, consider ignoring it!
+
+# Ignore WebDriver executables (optional, unless shared)
+drivers/
+chromedriver
+chromedriver.exe
+geckodriver
+geckodriver.exe
+
+# Ignore OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Ignore PyTest cache and test reports
+.pytest_cache/
+htmlcov/
+coverage.xml
+junitxml/
+.coverage
+.tox/
+
+# Ignore VS Code settings (optional)
+.vscode/
+
+# Ignore additional IDE-specific files
+.idea/
