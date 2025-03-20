@@ -6,6 +6,8 @@ class LoginPage:
     def __init__(self, driver):
         """
         Initialize the LoginPage with a WebDriver instance.
+
+        :param driver: The WebDriver instance to interact with the browser.
         """
         self.driver = driver
         self.logger = logging.getLogger(__name__)
@@ -13,7 +15,7 @@ class LoginPage:
     def load_page(self, base_url):
         """
         Load the login page.
-        
+
         :param base_url: The base URL of the application.
         """
         self.logger.info(f"Loading page: {base_url}")
@@ -22,7 +24,7 @@ class LoginPage:
     def login(self, username, password):
         """
         Perform login action.
-        
+
         :param username: The username to login with.
         :param password: The password to login with.
         """
@@ -33,9 +35,8 @@ class LoginPage:
     def get_error_message(self):
         """
         Get the error message displayed on the login page.
-        
+
         :return: The error message text.
         """
         self.logger.info("Retrieving error message")
         return self.driver.find_element(*LoginLocators.ERROR_MESSAGE).text
-    
