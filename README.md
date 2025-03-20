@@ -28,16 +28,19 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 - ```pip install -r requirements.txt```
 - requirements.txt:
    - pytest
+   - pytest-html
    - selenium
    - webdriver-manager
 
 ### Running Tests
 
 1. **Run Tests with PyTest**
-- ```pytest tests/```
+- ```pytest tests/test_login.py```
 
-2. **Generate HTML Report (optional)**
-- ```pytest --html=reports/report.html```
+2. **Run and Generate HTML Report**
+- ```pytest --html=reports/report.html``` (*All Tests*)
+- ```pytest tests/test_login.py --html=reports/test_report.html``` (*Specific Test*)
+- ```pytest tests/test_login.py::test_valid_login --html=reports/test_report.html``` (*Specific Function*)
 
 ### Additional Notes
 
