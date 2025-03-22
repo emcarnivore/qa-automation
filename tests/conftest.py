@@ -7,6 +7,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 from utils.config_loader import load_config
 import logging
 
+# Load configuration settings
 config = load_config()
 
 # Set up logging
