@@ -30,6 +30,7 @@ class LoginPage:
         """
         self.logger.info(f"Attempting to login with username: {username}")
         self.driver.find_element(*LoginLocators.USERNAME_FIELD).send_keys(username)
+        self.logger.info("Entering password")
         self.driver.find_element(*LoginLocators.PASSWORD_FIELD).send_keys(password + Keys.RETURN)
 
     def get_error_message(self):
