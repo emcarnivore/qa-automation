@@ -4,8 +4,8 @@
             "username": "standard_user",
             "password": "secret_sauce"
         },
-        "no_user": {
-            "username": "no_user",
+        "nonexistent_user": {
+            "username": "nonexistent_user",
             "password": "secret_sauce"
         },
         "locked_out_user": {

@@ -20,17 +20,28 @@ class LoginPage:
         """
         self.logger.info(f"Loading page: {base_url}")
         self.driver.get(base_url)
+        assert "login.html" in self.driver.current_url, "Failed to load login page"
+        self.logger.info("Login page loaded successfully")
 
-    def login(self, username, password):
+    def login(self, username, password, use_button=False):
         """
         Perform login action.
 
         :param username: The username to login with.
         :param password: The password to login with.
+        :param use_button: If True, click the login button instead of pressing Enter.
         """
         self.logger.info(f"Attempting to login with username: {username}")
         self.driver.find_element(*LoginLocators.USERNAME_FIELD).send_keys(username)
-        self.driver.find_element(*LoginLocators.PASSWORD_FIELD).send_keys(password + Keys.RETURN)
+        self.driver.find_element(*LoginLocators.PASSWORD_FIELD).send_keys(password)
+    
+        if use_button:
+            self.logger.info("Clicking the login button")
+            self.driver.find_element(*LoginLocators.LOGIN_BUTTON).click()
+        else:
+            self.logger.info("Pressing Enter to submit the login form")
+            self.driver.find_element(*LoginLocators.PASSWORD_FIELD).send_keys(Keys.RETURN)
+            
 
     def get_error_message(self):
         """
@@ -39,4 +50,5 @@ class LoginPage:
         :return: The error message text.
         """
         self.logger.info("Retrieving error message")
-        return self.driver.find_element(*LoginLocators.ERROR_MESSAGE).text
+        error_message = self.driver.find_element(*LoginLocators.ERROR_MESSAGE).text
+    

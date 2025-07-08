@@ -26,7 +26,6 @@ def load_test_data(data_file='data/test_data.json'):
         logger.error(f"Error decoding JSON from {data_file}: {e}")
         raise
 
-# Example usage
 if __name__ == "__main__":
     test_data = load_test_data()
     print(test_data)

@@ -26,7 +26,6 @@ def load_config(config_file='config/config.json'):
         logger.error(f"Error decoding JSON from {config_file}: {e}")
         raise
 
-# Example usage
 if __name__ == "__main__":
     config = load_config()
     print(config)
