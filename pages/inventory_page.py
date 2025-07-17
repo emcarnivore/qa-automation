@@ -1,6 +1,6 @@
 from selenium.webdriver.common.keys import Keys
-from locators.login_locators import LoginLocators
 from pages.login_page import LoginPage
+from locators.inventory_locators import InventoryLocators
 import logging
 
 class InventoryPage:
@@ -13,7 +13,7 @@ class InventoryPage:
         self.driver = driver
         self.logger = logging.getLogger(__name__)
 
-    def load_page(self, base_url, username, password):
+    def load_inventory_page(self, base_url, username, password):
         """
         Log in and load the inventory page.
 
@@ -23,9 +23,20 @@ class InventoryPage:
         """
         self.logger.info(f"Logging in and loading inventory page: {base_url}")
         login_page = LoginPage(self.driver)  # Use LoginPage to log in
-        login_page.load_page(base_url)  # Load the login page
+        login_page.load_login_page(base_url)  # Load the login page
         login_page.login(username, password)  # Perform login
         assert "inventory.html" in self.driver.current_url, "Failed to load inventory page"
         self.logger.info("Inventory page loaded successfully")
 
-    # TODO - Implement methods for interacting with the inventory page
+    def get_inventory_items(self):
+        """
+        Retrieve a list of inventory items displayed on the page.
+
+        :return: A list of inventory item elements.
+        """
+        self.logger.info("Retrieving inventory items")
+        items = self.driver.find_elements(*InventoryLocators.INVENTORY_ITEMS)
+        self.logger.info(f"Found {len(items)} inventory items")
+        return items
+    
+# TODO - Implement more methods for interacting with the inventory page

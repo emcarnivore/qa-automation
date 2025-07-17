@@ -19,4 +19,9 @@ class InventoryLocators:
     PRICE_LOW_HIGH_OPTION = (By.XPATH, "//option[@value='lohi']")
     PRICE_HIGH_LOW_OPTION = (By.XPATH, "//option[@value='hilo']")
 
+    INVENTORY_ITEMS = (By.CLASS_NAME, "inventory_item")
+    PRODUCT_NAMES = (By.CLASS_NAME, "inventory_item_name")
+    ADD_TO_CART_BUTTONS = (By.CSS_SELECTOR, "button[data-test^='add-to-cart']")
+    SHOPPING_CART_BADGE = (By.CLASS_NAME, "shopping_cart_badge")
+
     # TODO - Add locators for inventory items

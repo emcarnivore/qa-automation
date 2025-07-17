@@ -12,7 +12,7 @@ class LoginPage:
         self.driver = driver
         self.logger = logging.getLogger(__name__)
 
-    def load_page(self, base_url):
+    def load_login_page(self, base_url):
         """
         Load the login page.
 

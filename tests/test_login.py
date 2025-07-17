@@ -13,7 +13,7 @@ test_data = load_test_data()
 def test_login_with_keys(driver):
     """Test login by pressing Enter."""
     login_page = LoginPage(driver)
-    login_page.load_page(config["base_url"])
+    login_page.load_login_page(config["base_url"])
     login_page.login(
         test_data["login"]["standard_user"]["username"], 
         test_data["login"]["standard_user"]["password"],
@@ -26,7 +26,7 @@ def test_login_with_keys(driver):
 def test_login_with_button_click(driver):
     """Test login by clicking the login button."""
     login_page = LoginPage(driver)
-    login_page.load_page(config["base_url"])
+    login_page.load_login_page(config["base_url"])
     login_page.login(
         test_data["login"]["standard_user"]["username"], 
         test_data["login"]["standard_user"]["password"],
@@ -39,7 +39,7 @@ def test_login_with_button_click(driver):
 def test_login_with_nonexistent_user(driver):
     """Test login with non-existent user credentials."""
     login_page = LoginPage(driver)
-    login_page.load_page(config["base_url"])
+    login_page.load_login_page(config["base_url"])
     login_page.login(
         test_data["login"]["nonexistent_user"]["username"], 
         test_data["login"]["nonexistent_user"]["password"]
@@ -54,7 +54,7 @@ def test_login_with_nonexistent_user(driver):
 def test_login_with_locked_out_user(driver):
     """Test login with locked out user credentials."""
     login_page = LoginPage(driver)
-    login_page.load_page(config["base_url"])
+    login_page.load_login_page(config["base_url"])
     login_page.login(
         test_data["login"]["locked_out_user"]["username"], 
         test_data["login"]["locked_out_user"]["password"]
