@@ -15,7 +15,7 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 
 1. **Clone the Repository**
 - ```git clone <repository-url>```
-- ```cd qa-automation```
+- ```cd saucedemo-qa-selenium```
 
 2. **Create a Virtual Environment**
 - ```python3 -m venv venv```
@@ -35,7 +35,7 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 ### Running Tests
 
 1. **Run Tests with PyTest**
-- ```pytest tests/test_login.py```
+- ```pytest tests/test_login.py``` (*Specific Test*)
 
 2. **Run and Generate HTML Report**
 - ```pytest --html=reports/report.html``` (*All Tests*)
@@ -45,6 +45,7 @@ This project is a **QA Automation** framework using **Selenium with Python**. It
 ### Additional Notes
 
 1. Ensure that your IDE (e.g. Visual Studio Code) is configured to use the virtual environment's interpreter.
+If it's not enter the Command Palette Cmd+Shift+P → "Python: Select Interpreter" → Python (venv)
 
 2. **To Deactivate the Virtual Environment**
 - ```deactivate```
